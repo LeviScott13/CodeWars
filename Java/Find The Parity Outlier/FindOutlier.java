@@ -1,7 +1,7 @@
 public class FindOutlier{
   static int find(int[] integers){
     
-    //Instantiate an even count and odd count to check if the integer array has mostly odd or even integeres
+    //Instantiate an even count and odd count to check if the integer array has mostly odd or even integers
     //Instantiate to intialize the outlier
     int countEven = 0, countOdd = 0, value = 0;
     
@@ -13,7 +13,9 @@ public class FindOutlier{
         else
             countOdd++;
     }
+    //****************************************************************************
     //After the counts have been initialized, check which count has a value of 1
+    //****************************************************************************
     if(countEven == 1){
       for (int i = 0; i < integers.length;i++){
         //Finds the even outlier in an array full of odd values
