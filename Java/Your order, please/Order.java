@@ -26,11 +26,11 @@ public class Order {
           while(value == false){
               //Check which string value contains the value equal to the initialized count variable
               if(word[j].contains(Integer.toString(count))){
-                  //append that string value to the String Builder, update the boolean value to exit the loop
+                  //Append that string value to the String Builder, update the boolean value to exit the loop
                   order.append(word[j] + " ");
                   value = true;
               }
-              //If the string value does not contain value equal to the count variable, index to the next string value
+              //If the string value does not contain the value equal to the count variable, index to the next string value
               else
                   j++;
           }
@@ -39,7 +39,7 @@ public class Order {
           count++;
       }
     }
-    //return the order of the correct sentence sequence of the string
+    //Return the order of the correct sentence sequence of the string
     return order.toString().trim();
   }
 }
