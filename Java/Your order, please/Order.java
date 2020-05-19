@@ -24,9 +24,9 @@ public class Order {
           //Update the value back to false after each iteration
           value = false;
           while(value == false){
-              //Check which string value contains the value equal to the initialized count variable, update the boolean value to exit the loop
+              //Check which string value contains the value equal to the initialized count variable
               if(word[j].contains(Integer.toString(count))){
-                  //append that string value to the String Builder
+                  //append that string value to the String Builder, update the boolean value to exit the loop
                   order.append(word[j] + " ");
                   value = true;
               }
