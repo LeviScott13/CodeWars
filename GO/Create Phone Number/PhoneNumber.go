@@ -1,17 +1,9 @@
 package kata
 
-import "strconv"
+import "fmt"
 
 func CreatePhoneNumber(numbers [10]uint) string {
-    //Initialize a string value to store a phone number
-    var s string
 
-    //Store the format of the phone number and convert the numbers in the array to strings
-    s = "(" + strconv.FormatInt(int64(numbers[0]), len(numbers)) + strconv.FormatInt(int64(numbers[1]), len(numbers)) + strconv.FormatInt(int64(numbers[2]), len(numbers)) + ")" +
-        " " + strconv.FormatInt(int64(numbers[3]), len(numbers)) + strconv.FormatInt(int64(numbers[4]), len(numbers)) + strconv.FormatInt(int64(numbers[5]), len(numbers)) + "-" +
-        strconv.FormatInt(int64(numbers[6]), len(numbers)) + strconv.FormatInt(int64(numbers[7]), len(numbers)) + strconv.FormatInt(int64(numbers[8]), len(numbers)) + 
-        strconv.FormatInt(int64(numbers[9]), len(numbers)) 
-    
-    //Return the created phone number
-    return s
+    //Return the format of the phone number using Sprintf to create a string and get the individual numbers by their index in the array
+    return fmt.Sprintf("(%d%d%d) %d%d%d-%d%d%d%d", numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6], numbers[7], numbers[8], numbers[9])
 }
